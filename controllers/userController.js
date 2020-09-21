@@ -109,7 +109,7 @@ exports.register = function(req, res){
             to: user.data.email,
             from: 'bajracharya.tjn@gmail.com',
             subject: 'Welcome to Thigh High Club',
-            html: 'You have registered successfully. You can now start writing!'
+            text: 'You have registered successfully. You can now start writing!'
         })
         req.session.user = {username: user.data.username, avatar: user.avatar, _id: user.data._id}
         req.session.save(function(){
